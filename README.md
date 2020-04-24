@@ -1,4 +1,4 @@
-# dockerproject
+# Docker Project
 Multi-container application
 
 # Content
