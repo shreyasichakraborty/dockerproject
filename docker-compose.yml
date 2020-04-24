@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+        dbos1:
+                image: mysql:5.7
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: rootpass
+                        MYSQL_USER: shrey
+                        MYSQL_PASSWORD: redhat
+                        MYSQL_DATABASE: drupaldb
+
+
+                volumes:
+                        - mysql_storage_drupal:/var/lib/mysql
+        
+
+        drupalos:
+
+                image: drupal:latest
+                ports:
+                        - 8082:80
+                volumes:
+                        - drupal_storage_modules:/var/www/html/modules
+                        - drupal_storage_profiles:/var/www/html/profiles
+                        - drupal_storage_themes:/var/www/html/themes
+                        - drupal_storage_sites:/var/www/html/sites
+                restart: always
+                depends_on:
+                        - dbos1
+
+volumes:
+        mysql_storage_drupal:
+        drupal_storage_modules:
+        drupal_storage_profiles:
+        drupal_storage_themes:
+        drupal_storage_sites:
+
