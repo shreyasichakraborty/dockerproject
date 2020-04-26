@@ -7,4 +7,5 @@ Multi-container application
 3.Output (View DOCKER_OUTPUT.pdf) <br>
 4.Steps to run the application (View DOCKER_SETUP.pdf)<br>
 5.Steps to install drupal (View DRUPAL_INSTALLATION_SETUP.pdf)<br>
-6.Instructions
+6.MySQL commands sheet <br>
+7.Instructions
