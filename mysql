@@ -1,0 +1,28 @@
+#install mysql command 
+$ yum install mysql
+
+#check if mysql is installed
+$ which mysql
+
+#login into the database to view the data
+
+#check the IP of the container running the database
+$ docker inspect [container_name] | grep IP
+
+#login into database
+$ mysql -h [IP of database container] -u [db_username] -p[db_password]
+
+#view the database
+mysql> show databases;
+
+# use a database
+mysql> use [database_name]
+
+#view tables of a database
+mysql> show tables;
+
+#view contents stored in the tables
+mysql> select * from [tablename];
+
+#exit the database
+mysql> exit
